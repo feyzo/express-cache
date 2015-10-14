@@ -18,9 +18,11 @@ var cacher = function (options) {
 
     res.originalSend = res.send;
 
-    res.sendCache(function (key) {
-      res.originalSend(memoryCache[key]);
-    });
+    //TODO: Let user use sendCache function 
+    // after they validate their parameters etc.
+    // res.sendCache(function (key) {
+    //   res.originalSend(memoryCache[key]);
+    // });
 
     res.send = function (body) {
       finalBody = body;
